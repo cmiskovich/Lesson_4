@@ -89,11 +89,15 @@ cumulative_profit_late takes profit_per_trade and uses the cumsum function to de
 
 ---
 
-## Libraties used in analysis
+## Libraries used in analysis
 
 Pandas
 
 Path
+
+Seaborn
+
+Numpy
 
 %matplotlib
 
