@@ -38,59 +38,32 @@ Jupyter Lab
 
 ## General information about analysis.
 
-Arbitrage opportunities existed by as the months progressed the two marketplaces Bitstamp and Coinbase started having more similiar close prices.  This reduced the opportunity in February and it disappeared in March.  January had incredible opportunity for returns especially January 29th,2018 with a potential cumulative profits of $148,647.30.   With arbitrage opportuinities when they occur they are quickly discovered and then disappear.
-
+During the analysis you realize the best funds compared to the S&P 500 are Tiger Global and Berkshire Hathaway.  When you take them on individually you then see that Berkshire Hathaway has less risk reward compared to the S&P 500.  The visualizations and calculations really help reinforce the initial data of returns and cumulative returns.
 
 ---
 
 ## Information about datasets
 
-Bitstamp and Coinbase datasets were created using the csv files provided in the Resource folder.  The length of time similiar for both was from January 1st, 2018 to March 31st, 2018.  Using those datasets I was able to plot both of them in for their entirety and also overlap them.  After that we were asked to do an early month and a late month so I ovelapped them for January and March 2018.
+You start the analysis with reading the csv file whale_navs.  The file includes data for the Soros Fund Management, Paulson & Company, Tiger Global Managment, Berkshire Hathaway and the S&P 500.  
 
-After that I specified days and created the following datasets:
-
-January 29th, 2018:
-
-arbitrage_spread_early Subtracted the larger close price from a marketplace from the other.
-
-spread_return_early took the arbitrage_spred_early greater than zero and divided by the lower closing marketplace.
-
-profitable_trades_early took the spread_return dataset and looked for amounts greater than .01 to cover any transaction fees.
-
-profit_per_trade_early took the amount of profitable_trades and multiplied the amount by the marketplace close.
-
-profit_sum_early takes profit_per_trade and sums the amount.
-
-cumulative_profit_early takes profit_per_trade and uses the cumsum function to determine cumulative sum of profits.
-
-February 2nd, 2018:
-
-arbitrage_spread_middle Subtracted the larger close price from a marketplace from the other.
-
-spread_return_middle took the arbitrage_spred_middle greater than zero and divided by the lower closing marketplace.
-
-profitable_trades_middle took the spread_return dataset and looked for amounts greater than .01 to cover any transaction fees.
-
-profit_per_trade_middle took the amount of profitable_trades and multiplied the amount by the marketplace close.
-
-profit_sum_middle takes profit_per_trade and sums the amount.
-
-cumulative_profit_middle takes profit_per_trade and uses the cumsum function to determine cumulative sum of profits.
-
-
-March 2nd, 2018:
-
-arbitrage_spread_late Subtracted the larger close price from a marketplace from the other.
-
-spread_return_late took the arbitrage_spred_late greater than zero and divided by the lower closing marketplace.
-
-profitable_trades_late took the spread_return dataset and looked for amounts greater than .01 to cover any transaction fees.
-
-profit_per_trade_late took the amount of profitable_trades and multiplied the amount by the marketplace close.
-
-profit_sum_late takes profit_per_trade and sums the amount.
-
-cumulative_profit_late takes profit_per_trade and uses the cumsum function to determine cumulative sum of profits.
+whale_navs is a dataset showing the net asset value (NAV) for the 4 funds and the data for S&P 500 index.
+daily_returns is the percent change in the previous day's price.
+daily_returns_four this is the dataset without the S&P 500 index data.
+daily_returns_21 is the 21 day rolling window for daily_returns.
+daily_returns_21_four is the 21 day rolling window for daily_returns excluding S&P 500 index.
+daily_returns_60 is the 60 day rolling window for daily_returns variances for all funds and S&P 500 index.
+daily_returns_60_sp500 is the 60 day rolling window for daily_returns variances for only the S&P 500 index.
+cumulative_return is the cumulative returns for the entire time frame.
+volatility is the standard deviation for daily returns.
+volatility_annual using the square root of the standard deviation and 252 trading days we are able to get the annual standard deviation.
+avg_annual is the average annualize average return data.
+sharpe_ratios calculates the sharpe ratio (avg_annual / daily_returns.std() * np.sqrt(252) for each of the funds and S&P 500 index.
+daily_returns_60_cov_tiger covaraiance for Tiger Global Management.
+daily_returns_60_cov_bh covariance for Berkshire Hathaway.
+beta_tiger beta for Tiger Global Management.
+beta_bh beta for Berkshire Hathaway.
+beta_tiger_avg used to calculate the average value of the 60 day rolling beta.
+beta_bh_ avg used to calculate the average value of the 60 day rolling beta.
 
 
 ---
