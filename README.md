@@ -47,22 +47,39 @@ During the analysis you realize the best funds compared to the S&P 500 are Tiger
 You start the analysis with reading the csv file whale_navs.  The file includes data for the Soros Fund Management, Paulson & Company, Tiger Global Managment, Berkshire Hathaway and the S&P 500.  
 
 whale_navs is a dataset showing the net asset value (NAV) for the 4 funds and the data for S&P 500 index.
+
 daily_returns is the percent change in the previous day's price.
+
 daily_returns_four this is the dataset without the S&P 500 index data.
+
 daily_returns_21 is the 21 day rolling window for daily_returns.
+
 daily_returns_21_four is the 21 day rolling window for daily_returns excluding S&P 500 index.
+
 daily_returns_60 is the 60 day rolling window for daily_returns variances for all funds and S&P 500 index.
+
 daily_returns_60_sp500 is the 60 day rolling window for daily_returns variances for only the S&P 500 index.
+
 cumulative_return is the cumulative returns for the entire time frame.
+
 volatility is the standard deviation for daily returns.
+
 volatility_annual using the square root of the standard deviation and 252 trading days we are able to get the annual standard deviation.
+
 avg_annual is the average annualize average return data.
+
 sharpe_ratios calculates the sharpe ratio (avg_annual / daily_returns.std() * np.sqrt(252) for each of the funds and S&P 500 index.
+
 daily_returns_60_cov_tiger covaraiance for Tiger Global Management.
+
 daily_returns_60_cov_bh covariance for Berkshire Hathaway.
+
 beta_tiger beta for Tiger Global Management.
+
 beta_bh beta for Berkshire Hathaway.
+
 beta_tiger_avg used to calculate the average value of the 60 day rolling beta.
+
 beta_bh_ avg used to calculate the average value of the 60 day rolling beta.
 
 
