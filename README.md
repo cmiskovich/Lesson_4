@@ -1,7 +1,13 @@
 # Lesson_4
 # Primary application file
 
-Using Jupyter lab create a file to present to the VP of my department about arbitrage opportunites in cryptocurrencies.  In order to that I had to collect CSV data in a Jupyter notebook file. Then prepare the datasets for analysis by cleaning missing and erroneous data. Finally analyze the data at a high level through summary statistics and visualizations, and use this information to select areas for deeper analysis. 
+Produce a Jupyter notebook that contains your data preparation, analysis, and visualizations for key risk and return metrics. You should use text and comments to document your findings and answer the question prompts in the instructions. Specifically, this file should contain the following:
+
+        A single DataFrame imported from a CSV file that has a DateTimeIndex.
+
+        A risk analysis of the assets that the DataFrame contains vs. the S&P 500. This analysis should include risk-return metrics, including the           daily returns, standard deviation, Sharpe ratio, and beta.
+
+        An evaluation of each asset that uses rolling statistics to track the risk-reward behavior over time.
 
 ---
 
